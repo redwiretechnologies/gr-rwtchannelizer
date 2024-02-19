@@ -10,6 +10,7 @@
 # This has to come before project() which otherwise initializes it.
 # Build type can still be overridden by setting -DCMAKE_BUILD_TYPE=
 set(CMAKE_BUILD_TYPE "Release" CACHE STRING "")
+INCLUDE(CheckCXXSourceCompiles)
 
 ########################################################################
 # Project setup
@@ -78,7 +79,7 @@ endif()
 # Compiler settings
 ########################################################################
 
-include(GrCompilerSettings)
+#include(GrCompilerSettings)
 
 ########################################################################
 # Install directories
