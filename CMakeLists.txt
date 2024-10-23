@@ -10,7 +10,6 @@
 # This has to come before project() which otherwise initializes it.
 # Build type can still be overridden by setting -DCMAKE_BUILD_TYPE=
 set(CMAKE_BUILD_TYPE "Release" CACHE STRING "")
-INCLUDE(CheckCXXSourceCompiles)
 
 ########################################################################
 # Project setup
@@ -18,6 +17,7 @@ INCLUDE(CheckCXXSourceCompiles)
 cmake_minimum_required(VERSION 3.8)
 project(gr-rwtchannelizer CXX C)
 enable_testing()
+INCLUDE(CheckCXXSourceCompiles)
 
 # Install to PyBOMBS target prefix if defined
 if(DEFINED ENV{PYBOMBS_PREFIX})

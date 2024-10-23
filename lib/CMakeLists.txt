@@ -19,7 +19,7 @@ list(APPEND rwtchannelizer_sources
 
 install(FILES
     chan_fpga.h
-    chan_tags.h 
+    chan_tags.h
     taps.h DESTINATION include/gnuradio/rwtchannelizer
 )
 
@@ -44,6 +44,7 @@ target_include_directories(gnuradio-rwtchannelizer
     PUBLIC $<INSTALL_INTERFACE:include>
   )
 set_target_properties(gnuradio-rwtchannelizer PROPERTIES DEFINE_SYMBOL "gnuradio_rwtchannelizer_EXPORTS")
+set_target_properties(gnuradio-rwtchannelizer PROPERTIES CXX_VISIBILITY_PRESET default)
 
 if(APPLE)
     set_target_properties(gnuradio-rwtchannelizer PROPERTIES

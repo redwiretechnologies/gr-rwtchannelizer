@@ -67,6 +67,8 @@ public:
         "chan_first_wait"
     };
 
+    bool chan_bypass;
+    uint32_t fft_size;
 private:
 
     void set_coefficients();
@@ -79,12 +81,10 @@ private:
     void set_chan_first_num(uint32_t value_u32);
     void set_chan_first_wait(uint32_t value_u32);
 
-    uint32_t fft_size;
     uint32_t avg_len;
     uint32_t payload_length;
     uint32_t chan_first_num;
     uint32_t chan_first_wait;
-    bool chan_bypass;
     bool chan_first_enable;
 
     std::vector<uint32_t> downselections;
